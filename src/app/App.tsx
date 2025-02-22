@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 
-import ResponsiveAppBar from "./components/ResponsiveAppBar/ResponsiveAppBar.tsx";
-import HomePage from "./pages/HomePage/HomePage.tsx";
-import SchedulingPage from "./pages/SchedulingPage/SchedulingPage.tsx";
+import ResponsiveAppBar from "../components/ResponsiveAppBar/ResponsiveAppBar.tsx";
+import HomePage from "../pages/HomePage/HomePage.tsx";
+import SchedulingPage from "../pages/SchedulingPage/SchedulingPage.tsx";
 
 const App: React.FC = () => {
     return (
