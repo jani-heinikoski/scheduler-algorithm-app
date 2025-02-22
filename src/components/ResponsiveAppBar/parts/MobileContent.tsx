@@ -1,18 +1,20 @@
 import * as React from "react";
+import { NavLink } from "react-router";
+
 import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
-import { NavLink } from "react-router";
 import { useTheme } from "@mui/material";
 
-import { ResponsiveAppBarProps } from "../../../types";
 import AppBarLogo from "./AppBarLogo";
 
-const MobileContent: React.FC<ResponsiveAppBarProps> = ({ pages }) => {
+import useAppContext from "../../../hooks/useAppContext.ts";
+
+const MobileContent: React.FC = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
         null
     );
 
+    const { pages } = useAppContext();
     const theme = useTheme();
 
     const handleOpenMobileNavMenu = (event: React.MouseEvent<HTMLElement>) => {

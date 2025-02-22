@@ -1,19 +1,17 @@
 import * as React from "react";
 import { Box } from "@mui/material";
-import AppBarLogo from "./AppBarLogo.tsx";
 
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 
+import AppBarLogo from "./AppBarLogo.tsx";
 import DesktopNavLink from "./DesktopNavLink";
-import { ResponsiveAppBarProps } from "../../../types.tsx";
 
-const DesktopContent: React.FC<ResponsiveAppBarProps> = ({
-    pages,
-    toggleDarkMode,
-}) => {
-    const isDarkModeEnabled = localStorage.getItem("darkMode") === "true";
+import useAppContext from "../../../hooks/useAppContext.ts";
+
+const DesktopContent: React.FC = () => {
+    const { isDarkMode, toggleDarkMode, pages } = useAppContext();
 
     return (
         <>
@@ -39,7 +37,7 @@ const DesktopContent: React.FC<ResponsiveAppBarProps> = ({
                 <FormControlLabel
                     control={
                         <Switch
-                            checked={isDarkModeEnabled}
+                            checked={isDarkMode}
                             color="secondary"
                             onChange={() => toggleDarkMode()}
                         />

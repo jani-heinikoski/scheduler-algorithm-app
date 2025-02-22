@@ -1,35 +1,18 @@
-import "./App.css";
-
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import ResponsiveAppBar from "./components/ResponsiveAppBar/ResponsiveAppBar.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import SchedulingPage from "./pages/SchedulingPage/SchedulingPage.tsx";
-import { Page } from "./types.tsx";
 
-const pages: Array<Page> = [
-    { name: "Home", relativePath: "/" },
-    { name: "Scheduling Algorithms", relativePath: "/scheduling" },
-];
-
-interface AppProps {
-    toggleDarkMode: () => void;
-}
-
-const App: React.FC<AppProps> = ({ toggleDarkMode }) => {
+const App: React.FC = () => {
     return (
-        <>
-            <BrowserRouter basename="scheduler-algorithm-app">
-                <ResponsiveAppBar
-                    pages={pages}
-                    toggleDarkMode={toggleDarkMode}
-                />
-                <Routes>
-                    <Route index element={<HomePage />} />
-                    <Route path="/scheduling" element={<SchedulingPage />} />
-                </Routes>
-            </BrowserRouter>
-        </>
+        <BrowserRouter basename="scheduler-algorithm-app">
+            <ResponsiveAppBar />
+            <Routes>
+                <Route index element={<HomePage />} />
+                <Route path="/scheduling" element={<SchedulingPage />} />
+            </Routes>
+        </BrowserRouter>
     );
 };
 

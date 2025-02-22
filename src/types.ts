@@ -3,7 +3,8 @@ export interface Page {
     relativePath: string;
 }
 
-export interface ResponsiveAppBarProps {
-    pages: Array<Page>;
+export interface AppContextType {
     toggleDarkMode: () => void;
+    isDarkMode: boolean;
+    pages: Page[];
 }
