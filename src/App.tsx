@@ -19,7 +19,7 @@ interface AppProps {
 const App: React.FC<AppProps> = ({ toggleDarkMode }) => {
     return (
         <>
-            <BrowserRouter>
+            <BrowserRouter basename="scheduler-algorithm-app">
                 <ResponsiveAppBar
                     pages={pages}
                     toggleDarkMode={toggleDarkMode}
