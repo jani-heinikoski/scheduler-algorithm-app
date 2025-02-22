@@ -59,7 +59,7 @@ const MobileContent: React.FC<ResponsiveAppBarProps> = ({ pages }) => {
                     {pages.map((page) => (
                         <NavLink
                             key={page.name}
-                            to={page.href}
+                            to={page.relativePath}
                             style={{ color: "inherit", textDecoration: "none" }}
                         >
                             {({ isActive }) => (

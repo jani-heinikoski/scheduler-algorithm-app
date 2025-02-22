@@ -8,8 +8,8 @@ import SchedulingPage from "./pages/SchedulingPage/SchedulingPage.tsx";
 import { Page } from "./types.tsx";
 
 const pages: Array<Page> = [
-    { name: "Home", href: "/" },
-    { name: "Scheduling Algorithms", href: "/scheduling" },
+    { name: "Home", relativePath: "/" },
+    { name: "Scheduling Algorithms", relativePath: "/scheduling" },
 ];
 
 interface AppProps {

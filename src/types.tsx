@@ -1,6 +1,6 @@
 export interface Page {
     name: string;
-    href: string;
+    relativePath: string;
 }
 
 export interface ResponsiveAppBarProps {

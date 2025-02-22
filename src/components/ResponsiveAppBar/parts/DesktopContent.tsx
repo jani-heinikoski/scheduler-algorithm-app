@@ -31,7 +31,7 @@ const DesktopContent: React.FC<ResponsiveAppBarProps> = ({
                     <DesktopNavLink
                         key={page.name}
                         text={page.name}
-                        href={page.href}
+                        href={page.relativePath}
                     />
                 ))}
             </Box>
